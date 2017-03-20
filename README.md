@@ -69,9 +69,9 @@ Options
 
 ```
 Highest exchange rate among the last 7 days for
-AED = 3.956680361296885 has been recorded on 2017-03-17
-JOD = 0.7633899758754705 has been recorded on 2017-03-17
-JPY = 122.43234711272108 has been recorded on 2017-03-20
+AED = 3.956680361296885 EUR has been recorded on 2017-03-17
+JOD = 0.7633899758754705 EUR has been recorded on 2017-03-17
+JPY = 122.43234711272108 EUR has been recorded on 2017-03-20
 ```
 
 **Example**
@@ -83,7 +83,7 @@ JPY = 122.43234711272108 has been recorded on 2017-03-20
 **Output**
 
 ```
-USD = 1.4120245183937374 has been recorded on 2017-03-14
+USD = 1.4120245183937374 JOD has been recorded on 2017-03-14
 ```
 
 **Example**
@@ -98,7 +98,7 @@ USD = 1.4120245183937374 has been recorded on 2017-03-14
 Please provide your number: 0049XXXXXXXXXXX
 Message sent, you should be receiving an SMS with the following content:
 Highest exchange rate among the last 7 days for
-USD = 1.4120245183937374 has been recorded on  2017-03-14
+USD = 1.4120245183937374 JOD has been recorded on  2017-03-14
 ```
 
 ## Development
