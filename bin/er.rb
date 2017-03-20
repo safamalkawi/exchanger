@@ -12,15 +12,15 @@ program :description, 'Convert currencies'
 
 global_option '-b', '--base BASE_CURRENCY', String, 'Specify base currency'
 global_option '-t', '--target TARGET_CURRENCY', String, 'Specify target currency'
-global_option '-o', '--output OUTPUT', String, 'Specify output destination'
+global_option '-o', '--output OUTPUT', String, '[Optional] Specify output destination It should be -o stdout to print output on console or -o sms to send a sms of the result. Default is sms'
 
 command :exchange do |c|
   c.syntax = 'exchange --base=X --target=Y'
   c.description = 'Show exchange rate between base and target currencies'
-  c.option '-d', '--date DATE', String, 'A specific date to feth the currencies'
-  c.option '-a', '--amount AMOUNT', Float, 'Specify an amount for conversion'
+  c.option '-d', '--date DATE', String, '[Optional] A specific date to feth the currencies. Default is date = Date.today'
+  c.option '-a', '--amount AMOUNT', Float, '[Optional] Specify an amount for conversion. Default is amount = 1'
   c.action do |args, options|
-    options.default :amount => 1, :date => '', :output => 'stdout'
+    options.default :amount => 1, :date => '', :output => 'sms'
 
     # Inject outputer dependency
     outputer = getOutputer(options.output)
