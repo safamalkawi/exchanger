@@ -15,9 +15,9 @@ command:  exchange =>  Shows exchange rates between specified base and target cu
 Options
  -b, --base BASE_CURRENCY, String, Specify base currency
  -t, --target TARGET_CURRENCY, String, Specify target currencies
- -o, --output OUTPUT, String, Specify output destination; It should be '-o stdout' to print output on console or '-o sms' to send a sms of the result. Default is sms
- -d, --date DATE, String, A specific date to fetch the currencies rates on. It should be in format YYY-MM-DD. Default is date = Date.today
- -a, --amount AMOUNT, Float, Specify an amount for conversion. Default is amount = 1
+ -o, --output OUTPUT, String, , [Optional Specify output destination; It should be '-o stdout' to print output on console or '-o sms' to send a sms of the result. Default is sms
+ -d, --date DATE, String, , [Optional A specific date to fetch the currencies rates on. It should be in format YYY-MM-DD. Default is date = Date.today
+ -a, --amount AMOUNT, Float, [Optional] Specify an amount for conversion. Default is amount = 1
 ```
     
 **Example**: 
@@ -57,7 +57,7 @@ command: report_best ==> Show the best exchange rates for the last 7 days for a 
 Options
  -b, --base BASE_CURRENCY, String, Specify base currency
  -t, --target TARGET_CURRENCY, String, Specify target currencies
- -o, --output OUTPUT, String, Specify output destination; It should be '-o stdout' to print output on console or '-o sms' to send a sms of the result. Default is sms
+ -o, --output OUTPUT, String, , [Optional Specify output destination; It should be '-o stdout' to print output on console or '-o sms' to send a sms of the result. Default is sms
 ```
 
 **Example**
@@ -95,7 +95,7 @@ USD = 1.4120245183937374 has been recorded on 2017-03-14
 **Output**
 
 ```
-Please provide your number: XXXXXXXXXXX
+Please provide your number: 0049XXXXXXXXXXX
 Message sent, you should be receiving an SMS with the following content:
 Highest exchange rate among the last 7 days for
 USD = 1.4120245183937374 has been recorded on  2017-03-14

@@ -23,7 +23,7 @@ module Cringle
       result = JSON.parse(response.body)
 
       if result['success'] == false
-        raise "No data available for specified date. URI: #{uri}"
+        raise "No data available for specified date. Date shoulf be in format YYY-MM-DD.\n Current day rates might be unavailable yet"
       end
       result
     end

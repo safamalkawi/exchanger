@@ -11,13 +11,18 @@ module Cringle
       @output = outputer
     end
 
-    def reportBestRate(base, target)
+    def reportBestRate(base, target, start_date)
       chackAvailability(base, target)
       targets = target.split(',')
       weekRates = {}
       dayRates = {}
-      (1..7).each do |day|
-        date = Date.today - day
+
+      if start_date == nil
+        start_date = Date.today
+      end
+
+      (0..6).each do |day|
+        date = start_date - day
         dayRates = @cl.getRatesByDate(date.to_s)
         dayRates = getBaseRates(base, normalizeRates(dayRates), targets)
         dayRates.shift
@@ -30,7 +35,7 @@ module Cringle
       end
       output = "Highest exchange rate among the last 7 days for \n"
       weekRates.each do |key, value|
-        output += "#{key} = #{value[0]} has been recorded on #{value[1]}\n"
+        output += "#{key} = #{value[0]} #{base} has been recorded on #{value[1]}\n"
       end
       @output.print(output)
     end

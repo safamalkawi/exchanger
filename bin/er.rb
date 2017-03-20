@@ -37,7 +37,7 @@ command :report_best do |c|
     options.default :output => 'stdout'
     outputer = getOutputer(options.output)
     app = Cringle::Application.new(outputer)
-    app.reportBestRate(options.base, options.target)
+    app.reportBestRate(options.base, options.target, nil)
   end
 end
 
