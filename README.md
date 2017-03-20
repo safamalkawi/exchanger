@@ -9,9 +9,7 @@ This is a ruby a command line application which handles currency exchange rates 
     $ bundle install
 
 ## Usage
-
-------- Command 1 ------------- Command 1 ------------- Command 1 ------------- Command 1 ------------- Command 1 --------
-
+### Command 1
 command:  exchange =>  Shows exchange rates between specified base and target currencies with optional date and amount.
 
 Options
@@ -39,9 +37,7 @@ Date:2017-01-01
 65.7876 JOD = 88.25364073170525 EUR
 65.7876 JOD = 10856.891182961366 JPY
 
-
-------- Command 2 ------------- Command 2 ------------- Command 2 ------------- Command 2 ------------- Command 2 --------
-
+### Command 2
 command: report_best ==> Show the best exchange rates for the last 7 days for a specified base and target currencies
 
 Options
