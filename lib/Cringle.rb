@@ -26,9 +26,13 @@ module Cringle
       weekRates.each do |key, value|
         value = value.split(",").map {|i| i.to_f}
         maxRate = value.max
-        weekRates[key] = [maxRate, "Date: "+(Date.today - value.index(maxRate)).to_s ]
+        weekRates[key] = [maxRate, (Date.today - value.index(maxRate)).to_s ]
       end
-      @output.print(weekRates)
+      output = "Highest exchange rate among the last 7 days for \n"
+      weekRates.each do |key, value|
+        output += "#{key} = #{value[0]} has been recorded on #{value[1]}\n"
+      end
+      @output.print(output)
     end
 
     def chackAvailability(base, target)
